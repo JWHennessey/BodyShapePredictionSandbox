@@ -1,0 +1,407 @@
+    a{
+      outline:none;
+      -moz-outline-style:none;
+    }
+
+    #controls{
+      float: left;
+      clear: none;
+      width: 180px;
+      height: 400px;
+      margin: 15px 0 0 15px;
+      padding-right: 15px;
+      border-right-style: solid;
+      border-right-width: 1px;
+    }
+
+    #new{
+      float: left;
+      clear: none;
+      width: 400px;
+      margin-right: 50px;
+    }
+
+    #mean{
+      float: left;
+      clear: none;
+      width: 400px;
+      margin-top: -13px;
+    }
+
+    h2{
+      text-align: center;
+     
+    }
+
+    #right-top{
+      width: 100%;
+      float: left;
+      clear: none;
+      height: 35px;
+    }
+
+    #right-top h2{
+      float: left;
+      clear: none;
+      margin-left: 175px;
+      margin-right: 50px;
+    }
+
+    .slidername{
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      padding-bottom: 5px;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    .slider-result{
+      text-align: center;
+      padding-top: 5px;
+      font-size: 14px;
+    }
+
+    #formbutton{
+      margin-left: 80px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+   .chromeFrameInstallDefaultStyle {
+     margin-top: 10px;
+     width: 800px;
+     border: 5px solid blue;
+   }
+
+   .obj{
+      width: 345px;
+      height: 600px;
+      clear: none;
+      float: left;
+      background-color: #606060;
+   
+
+   }
+
+   .control{
+      height:700px;
+      margin: 0 15px 10px 15px;
+      float: left;
+      clear: none;
+   }
+
+   .view-container{
+     float: left;
+     clear: none;
+     height: 600px;
+     margin-left: auto;
+     margin-right: auto;  
+     margin-bottom: 30px;
+     margin-top: 15px;
+   }
+
+   .ul-controls{
+    list-style-type: none;
+ 
+   }
+
+   .ul-controls .btn{
+    margin: 0px;
+    padding: 0px;
+    text-align: right;
+   }
+
+   .ul-controls .title{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+   }
+
+   #main-container{
+    margin-top: 50px;
+   }
+
+   .span7{
+      background-color: #eeeeee;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      width:685px;
+   }
+   .span5{
+      background-color: #eeeeee;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      margin-left: 15px;
+   }
+
+
+
+   #reset{
+    margin: 20px 0 0 60px;
+    text-align: center;
+   }
+
+   footer{
+     text-align: center;
+     margin-top: 10px;
+   }
+
+   h4{
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+   }
+
+   .h4control{
+      margin-bottom: 17px;
+   }
+
+   label{
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 5px;
+    text-align: center;
+    clear: both;
+   }
+
+   .size{
+    width: 40px;
+    
+   }
+
+   .doublesize{
+    width: 80px;
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+  }
+
+   .radioM{
+      float: left;
+      clear: none;
+      padding-left: 0;
+      padding-right: 3px;
+      font-weight: normal;
+   }
+
+   input.radioM{
+      margin-top: 9px;
+   }
+
+   .title{
+      font-weight: bold;
+      width: 30px;
+   }
+
+   .control p{
+     margin: 0px;
+   }
+
+   .tFrom{
+    visibility:hidden;
+   }
+
+   .tTo{
+    visibility:hidden;
+   }
+
+   .vFrom{
+    visibility:hidden;
+   }
+
+   .vTo{
+    visibility:hidden;
+   }
+
+   .calculate{
+  }
+
+  .distance{
+    visibility:hidden;
+  }
+
+  .result{
+    visibility:hidden;
+  }
+
+  .fConfirm{
+    visibility:hidden;
+  }
+
+  .tConfirm{
+    visibility:hidden;
+  }
+
+  .clear{
+    visibility:hidden;
+    margin-top: 3px;
+  }
+
+  .gif{
+    padding-left: 25px;
+    padding-top: 3px;
+  }
+
+  #back{
+    float: left;
+    clear: none;
+  }
+
+  #front{
+    float: left;
+    clear: none;
+  }
+
+
+  #left{
+    float: left;
+    clear: both;
+  }
+
+  #right{
+    float: left;
+    clear: none;
+    margin-bottom: 5px;
+  }
+
+  #cup{
+    float: left;
+    clear: none;
+  }
+
+  #cdown{
+    float: left;
+    clear: none;
+  }
+
+
+  #cleft{
+    float: left;
+    clear: both;
+  }
+
+ #cright{
+    float: left;
+    clear: none;
+    margin-bottom: 1px;
+  }
+
+  #in{
+    float: left;
+    clear: none;
+  }
+
+  #out{
+    float: left;
+    clear: none;
+    margin-bottom: 1px;
+  }
+
+  h5{
+    float: left;
+    clear: both;
+    margin-top: 5px;
+    margin-right: 3px;
+  }
+
+
+  .vertexInput{
+    width: 50px;
+    float: left;
+    clear: none;
+  }
+
+  .measure{
+  
+  }
+
+  .addPoint{
+    clear: both;
+    float: left;
+    margin-left: -20px;
+    margin-top: -30px;
+  }
+
+  .removeInput{
+    float: left;
+    clear: none;
+    margin-left: 3px;
+    margin-top: 7px;
+  }
+
+  .dropdown-toggle{
+   margin-top: 2px;
+  }
+
+  .navbar-inner h4{
+    float: left;
+    clear: none;
+    margin-top: 12px;
+    font-weight: 13px;
+    text-decoration: none;
+    margin-right: 5px;
+ }
+
+ .navbar-inner h4 span{
+   color: lightgrey;
+   padding-left: 3px;
+ }
+
+ #second-obj{
+   float: left;
+   clear: none;
+   width: 100px;
+   margin-top: 5px;
+ }
+
+ #second-obj select{
+   width: 100px;
+  
+ }
+
+ #measure-form{
+  margin-bottom: 5px;
+  float: left;
+  clear: both;
+ }
+
+ .distance-dropdown{
+  width: 80px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+ }
+
+ .radio-label{
+  margin-top: 5px;
+  font-weight: bold;
+  width: 15px;
+  margin-left: 5px;
+
+ }
+
+ #both, #trackball{
+  margin-left: 48px;
+  margin-top: -13px;
+  
+ }
+
+ .modal-body label{
+   text-align: left;
+   margin-bottom: 3px;
+   margin-left: 1px;
+ }
+
+ .modal-body button{
+   margin-top: -8px;
+ }
+
+ .modal-body form{
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+ }
+
+
+
+
+

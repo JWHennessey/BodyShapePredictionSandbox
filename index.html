@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <link href="css/style.css" rel="stylesheet"  />
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"  />
+  <script src="js/jquery.min.js"></script> 
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/json2.js"></script>   
+  <script src="js/underscore.js"></script> 
+  <script src="js/backbone.js"></script>
+  <script src="js/Three.js"></script>
+  <script src="js/CFInstall.min.js"></script>
+  <script src="js/OBJLoader.js"></script>
+  <script src="js/bootstrap-dropdown.js"></script>
+  <script src="js/bootstrap-modal.js"></script>
+
+ <title>Morphing Body Shapes</title>
+
+</head>
+<body>
+
+  <!--Navigation!-->
+  <div class="navbar navbar-fixed-top">
+     <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Predicting Body Shapes</a>
+
+          <h4>Data Set: <span>Original</span> </h4>
+
+          
+         <ul class="nav"> 
+          <li class="dropdown">
+              <a href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown">
+                  Change Data Set
+                 <b class="caret"></b>
+              </a>
+            <ul class="dropdown-menu">
+              <li><a  href="#">Original</a></li>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Male</a></li>
+                <li><a href="#">Female</a></li>
+            </ul>
+           </li>
+           </ul>
+        </div>
+     </div>
+  </div>
+
+
+  
+  <div id='main-container' class='container'>
+
+    <div class='row'>
+      <div class='span7'>
+        <h2>Morphable Body</h2>
+      
+        <div id='controls'>
+          
+          <!--Put in with jQuery!-->
+        </div>
+
+      <div id='morphable-body' class='view-container'>
+
+        <div class='control'>
+               <label>Move</label>
+               <button id='cup' class='btn size'>U</button>
+               <button id='cdown' class='btn size'>D</button>
+               <button id='cleft' class='btn size'>L</button>
+               <button id='cright' class='btn size'>R</button>
+               <button id='center' class='btn doublesize'>Center</button>
+               <label>Zoom</label>
+               <button id='in' class='btn size'> + </button><button id='out' class='btn size'> - </button>
+               <button id='middle' class='btn doublesize'>Center</button>
+
+               <label>Rotation</label>
+               <button id='on' class='btn size'>On</button><button id='off' class='btn size'>Off</button>
+               <label>Wireframe</label>
+               <button id='wireframeOn' class='btn size'>On</button><button id='wireframeOff' class='btn'>Off</button>
+               <label>View</label>
+               <button id='front' class='btn size'>F</button>
+               <button id='back' class='btn size'>B</button>
+               <button id='left' class='btn size'>L</button>
+               <button id='right' class='btn size'>R</button>
+                <!--  <p class='radio-label'>Track:</p>            
+                  <input type = "checkbox"
+                         name = "trackball"
+                         id = "trackball"
+                         value = "trackball"
+                         
+                         />!-->
+               <label><a data-toggle="modal" href="#myModal" >Save Img</a></label>
+              <label>Height</label>
+               <p class='height'>Test</p>
+
+               <label>Measure</label>
+               <form id='measure-form'>
+                 <select class='distance-dropdown'>
+                   <option value='euclidean'>Euclidean</option>
+                   <option value='dijkstra'>Dijkstra</option>"
+                 </select>
+                 <p class='radio-label'>Both:</p>            
+                  <input type = "checkbox"
+                         name = "both"
+                         id = "both"
+                         value = "both"
+                         
+                   />
+
+               </form>
+
+               <div class='measure'>
+                 
+
+               </div>
+               <i class='icon-plus-sign addPoint'></i>
+               <button class='btn btn-success doublesize calculate'>Calculate</button>
+               <div class='clear'>
+
+               </div>
+               <p class='pResult'><span class='title distance'>Distance:</span></p>
+               <p class='pResult'><span class='result'>100</span></p>
+               <button class='btn btn-danger doublesize clear'>Clear</button>
+
+               <!--
+               <label class="checkbox radioM">From:</label><input name='radioM' type="radio" id='from' class='radioM'>
+               <label class="checkbox radioM">To:  </label><input name='radioM' type="radio" id='to' class='radioM'>
+               <p class='pFrom'><span class='title tFrom'>From:</span> <span class='vertex vFrom'>v 6449</span></p> 
+               <p class='pTo'><span class='title tTo'>To:</span> <span class='vertex vTo'>v 6449</span></p> 
+               <button class='btn btn-success doublesize calculate'>Calculate</button>
+               <p class='pResult'><span class='title distance'>Distance:</span></p>
+               <p class='pResult'><span class='result'>100</span></p>
+               <button class='btn btn-danger doublesize clear'>Clear</button>!-->
+
+
+        </div>
+
+        <div id='morphable-body-obj' class='obj'>
+
+        </div>
+      </div>
+
+    </div><!--Span 7!-->
+
+
+    <div class='span5'>
+
+      <div id='right-top'>
+      <h2>Mean Body</h2>
+
+      <form id='second-obj'>
+        <select class='dropdown'>
+        
+        </select>
+      </form>
+
+      </div>      
+      <div id='mean-body' class='view-container'>
+
+        <div class='control'>
+               <label>Move</label>
+               <button id='cup' class='btn size'>U</button>
+               <button id='cdown' class='btn size'>D</button>
+               <button id='cleft' class='btn size'>L</button>
+               <button id='cright' class='btn size'>R</button>
+               <button id='center' class='btn doublesize'>Center</button>
+
+               <label>Zoom</label>
+               <button id='in' class='btn size'>+</button><button id='out' class='btn size' >-</button>
+               <button id='middle' class='btn doublesize'>Center</button>
+
+               <label>Rotation</label>
+               <button id='on' class='btn size'>On</button><button id='off' class='btn size'>Off</button>
+               <label>Wireframe</label>
+               <button id='wireframeOn' class='btn size'>On</button><button id='wireframeOff' class='btn size'>Off</button>
+               <label>View</label>
+               <button id='front' class='btn size'>F</button>
+               <button id='back' class='btn size'>B</button>
+               <button id='left' class='btn size'>L</button><button id='right' class='btn size'>R</button>
+               <label>Height</label>
+               <p class='height'>Test</p>
+               <label>Measure</label>
+               <form id='measure-form'>
+                 <select class='distance-dropdown'>
+                   <option value='euclidean'>Euclidean</option>
+                   <option value='dijkstra'>Dijkstra</option>"
+                 </select>
+                 <p class='radio-label'>Both:</p>            
+                  <input type = "checkbox"
+                         name = "both"
+                         id = "both"
+                         value = "both"
+                         
+                   />
+
+               </form>
+
+               <div class='measure'>
+                 
+
+               </div>
+               <i class='icon-plus-sign addPoint'></i>
+               <button class='btn btn-success doublesize calculate'>Calculate</button>
+               <div class='clear'>
+
+               </div>
+               <p class='pResult'><span class='title distance'>Distance:</span></p>
+               <p class='pResult'><span class='result'>100</span></p>
+               <button class='btn btn-danger doublesize clear'>Clear</button>
+
+        </div>
+
+      <div  id='mean-body-obj' class='obj'>
+      </div>
+     </div>
+    </div><!--Span 4!-->
+
+    </div><!--Row!-->
+
+      <!--Footer!-->
+      <footer class="footer">
+          <p>&copy; James Hennessey</p>   
+          </footer>
+
+   <div class="modal hide" id="myModal">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal"> x </button>
+      <h3>Save Morphed Body To File</h3>
+    </div>
+    <div class="modal-body">
+     
+        <label>Filename:</label>
+        <input type="text" class="input" id="filename" />
+        <button class="btn" id='writeToFile'>Write To File</button>
+     
+
+      <p class='download-file'> </p>
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn" data-dismiss="modal">Close</a>
+    </div>
+  </div>
+  
+
+  </div><!--Container!-->
+
+
+  <script src="js/mvc.js"></script>
+
+
+</body>
+</html>
