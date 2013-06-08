@@ -3,7 +3,7 @@ BodyShapePredictionSandbox
 
 Sandbox for morphing 3D body models, taking measurements and comparing results. This was used as part of my thesis where based on a limited number of input measurements an accurate prediction of the rest of the body could be made.
 
-The website makes use of node.js, backbone.js and D3.js. 
+The website makes use of node.js, backbone.js and Three.js. 
 
 The 3D models used are in .obj format. Unfortuatly .obj files couldn't be included in the repository due to licensing issues. 
 
